@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "washType": "Kokevask 90 min ",
+    "email": "ben@gmail.com",
+    "aptDate": "2018-11-28",
+    "aptTime": "10:15",
+    "aptTimeEnd": "11:15",
+    "washLength": 60,
+    "washingMachine": "1"
+  },
+  {
+    "id": 1,
+    "email": "ben@gmail.com",
+    "washType": "Kokevask 90 min ",
+    "aptDate": "2018-11-28",
+    "aptTime": "10:30",
+    "aptTimeEnd": "12:00",
+    "washLength": 90,
+    "washingMachine": "4"
+  }
+]
