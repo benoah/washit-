@@ -18,7 +18,6 @@ function App() {
       });
   }, []);
 
-  
   // used to make sure thats it is tracking the data and any changes.
   useEffect(() => {
     fetchData();
@@ -41,7 +40,6 @@ function App() {
         )}
       />
       <ul className="divide-y divide-gray-200 shadow-md">
-      
         {filteredAppointments.map((appointment) => (
           <AppointmentInfo
             key={appointment.id}
@@ -55,7 +53,6 @@ function App() {
             }
           />
         ))}
-      
       </ul>
     </div>
   );
