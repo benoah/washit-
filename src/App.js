@@ -4,12 +4,10 @@ import AddAppointment from "./components/AddAppointment";
 import AppointmentInfo from "./components/AppointmentInfo";
 
 function App() {
-  // usestate variables for the appointment and it is initialized to an empty array
-  let [appointmentList, setAppointmentList] = useState([]);
+  const [appointmentList, setAppointmentList] = useState([]);
 
   const filteredAppointments = appointmentList;
 
-  // using useCallback to monitor any changes that happend to the data.
   const fetchData = useCallback(() => {
     fetch("./data.json")
       .then((response) => response.json())
@@ -18,7 +16,6 @@ function App() {
       });
   }, []);
 
-  // used to make sure thats it is tracking the data and any changes.
   useEffect(() => {
     fetchData();
   }, [fetchData]);
