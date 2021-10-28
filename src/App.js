@@ -4,11 +4,12 @@ import AddAppointment from "./components/AddAppointment";
 import AppointmentInfo from "./components/AppointmentInfo";
 
 function App() {
+  // usestate variables for the appointment and it is initialized to an empty array
   let [appointmentList, setAppointmentList] = useState([]);
 
   const filteredAppointments = appointmentList;
 
-  // useCallback()  is used here useEffect to prevent the re-creation of the fumction
+  // using useCallback to monitor any changes that happend to the data.
   const fetchData = useCallback(() => {
     fetch("./data.json")
       .then((response) => response.json())
@@ -17,7 +18,8 @@ function App() {
       });
   }, []);
 
-  // Using useEffect to update the data everytime something is changed
+  
+  // used to make sure thats it is tracking the data and any changes.
   useEffect(() => {
     fetchData();
   }, [fetchData]);
@@ -39,7 +41,7 @@ function App() {
         )}
       />
       <ul className="divide-y divide-gray-200 shadow-md">
-{/*Are using map function and passing down the id to the key,then passing down a variabel called appointment to our component and its receiving a appointment variable.*/}
+      
         {filteredAppointments.map((appointment) => (
           <AppointmentInfo
             key={appointment.id}
@@ -53,6 +55,7 @@ function App() {
             }
           />
         ))}
+      
       </ul>
     </div>
   );

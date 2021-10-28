@@ -1,9 +1,8 @@
 import { BiTrash } from "react-icons/bi";
 
 // passing down a variabel called appointment from parent component
-// this is was called de-structuring thats because you can use variabeles by putting them in this object and receiving them.
+
 const AppointmentInfo = ({ appointment, onDeleteAppointment }) => {
-  console.log("appointment", appointment);
   return (
     <>
       <br></br>
@@ -17,7 +16,7 @@ const AppointmentInfo = ({ appointment, onDeleteAppointment }) => {
         </button>
         <div className="flex-grow">
           <div className="flex items-center">
-            <span className="flex-none font-medium text-2xl text-blue-500">
+            <span className="flex-none text-2xl text-blue-500">
               {appointment.email}
             </span>
             <span className="flex-grow text-right">{appointment.aptDate}</span>
