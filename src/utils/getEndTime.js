@@ -1,4 +1,4 @@
-export default function getEndTime({ startTime, startDate, washingLength }) {
+export default function getEndTime(startTime, startDate, washingLength) {
   const endTime = new Date(startDate + "T" + startTime);
 
   endTime.setHours(endTime.getHours() + 2);
